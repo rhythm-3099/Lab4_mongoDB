@@ -1,5 +1,5 @@
 		
-		category:News,
+		category:Politics,
 		date: today,
 		author:Jules Winnfield,
 
@@ -7,7 +7,7 @@
 
 		body-'The presidential race entered extraordinary new ground as the leading Democrats called off primary-night events in Cleveland, and President Trump’s signature rallies also faced an uncertain future.'
 		
-		number of views:2,
+		number of views:20,
 		tags:'news','events'
 --------------------------------------------------------------------------------------------------------------------------------------------	
 		category:Sports,
@@ -18,13 +18,13 @@
 
 		body-'Tottenham Hotspur's Champions League Campaign comes to an end as they are well beaten by RB Leipzig in the last 16.'
 		
-		number of views:5,
+		number of views:15,
 		tags:'sports','european football'
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 		category:Entertainment & Arts,
-		date: 10 March 2020,
-		author: Marsellus Wallace,
+		date: 10 March 2020,5:30pm UTC time
+		editor: Hans Landa,
 
 		title-'Parasite becomes UK's most successful international film',
 
@@ -32,3 +32,7 @@
 		
 		number of views:10,
 		tags:'The Oscars','Hollywood'
+		
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+

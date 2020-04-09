@@ -1,0 +1,112 @@
+**************************************** 201701273  ***********************************************
+
+Question1
+
+db.createCollection("sales", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: [
+        "saleDate",
+        "couponUsed",
+        "purchaseMethod",
+        "storeLocation",
+        "customer",
+        "items",
+      ],
+      properties: {
+        saleDate: {
+          bsonType: "date",
+        },
+        couponUsed: {
+          bsonType: "bool",
+        },
+        purchaseMethod: {
+          enum: ["In store", "Online", "Phone"],
+        },
+        storeLocation: {
+          enum: [
+            "Seattle",
+            "New York",
+            "Austin",
+            "London",
+            "Denver",
+            "San Diego",
+          ],
+        },
+        customer: {
+          bsonType: "object",
+          required: ["email", "age"],
+          properties: {
+            gender: {
+              enum: ["M", "F", "other"],
+            },
+            email: {
+              bsonType: "string",
+            },
+            age: {
+              bsonType: "int",
+            },
+            satisfaction: {
+              bsonType: "int",
+              minimum: 1,
+              maximum: 5,
+            },
+          },
+        },
+        items: {
+          bsonType: "array",
+          minItems: 1,
+          uniqueItems: true,
+          additionalProperties: false,
+          items: {
+            bsonType: "object",
+            required: ["price", "quantity", "name", "tags"],
+            properties: {
+              name: {
+                bsonType: "string",
+              },
+              price: {
+                bsonType: "decimal",
+                minimum: 0.0,
+              },
+              quantity: {
+                bsonType: "int",
+                minimum: 1,
+              },
+              tags: {
+                bsonType: "array",
+                minItems: 1,
+                uniqueItems: true,
+                items: {
+                  enum: [
+                    "kids",
+                    "school",
+                    "stationary",
+                    "writing",
+                    "organization",
+                    "travel",
+                    "electronics",
+                    "office",
+                    "general",
+                  ],
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+
+
+
+*****************************************************************************************
+
+Question2
+
+all the documents are passed
+
+*****************************************************************************************
